@@ -1,0 +1,75 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.app-container {
+  @extend .container-fluid;
+}
+
+.memo-tools-container {
+  @extend .row;
+}
+
+.memo-list-container {
+  @extend .col-sm-4;
+  overflow-y: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.memo-editor-container {
+  @extend .col-sm-8;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.memo-editor__contents {
+  @extend .form-control;
+  min-height: 20rem;
+}
+
+.memo-list {
+  @extend .list-group;
+}
+
+.memo-list__item {
+  @extend .list-group-item;
+  @extend .list-group-item-action;
+  @include text-truncate();
+  cursor: pointer;
+}
+
+.memo-list__item_active {
+  @extend .list-group-item;
+  @extend .list-group-item-action;
+  @extend .active;
+  @include text-truncate();
+  cursor: pointer;
+}
+
+.memo-list__unsaved {
+  color: theme-color('danger');
+}
+
+.memo-editor__create {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+.memo-editor__save {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+.memo-editor__delete {
+  @extend .btn;
+  @extend .btn-danger;
+}
+
+.memo-editor__cancel {
+  @extend .btn;
+
+}
+
+.memo-editor__toolbar {
+  @extend .d-flex;
+  @extend .justify-content-end;
+}
